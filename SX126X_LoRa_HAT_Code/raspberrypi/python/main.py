@@ -15,6 +15,8 @@
 #    Please refer to another script pc_main.py
 #
 
+# Yay this works!!!
+
 import sys
 import sx126x
 import threading
