@@ -107,7 +107,7 @@ def send_deal():
     # Restore terminal settings to allow seeing input
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
-    print("\nPlease input your message and press Enter key: ", end='')
+    print("\nPlease input your commands in the format <component>,<component_id>,<command>: ", end='')
     message = input()
 
     # Constants for address and frequency
