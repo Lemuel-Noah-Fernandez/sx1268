@@ -102,16 +102,13 @@ node = sx126x.sx126x(serial_num = "/dev/ttyS0",freq=433,addr=0,power=22,rssi=Fal
 #     print(" "*200)
 #     print('\x1b[3A',end='\r')
 
-import termios
-import tty
-import sys
 
 def send_deal():
     # Restore terminal settings to allow seeing input
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
     print("\nPlease input your message and press Enter key: ", end='')
-    message = input()  # Now you can see what you type
+    message = input()
 
     # Constants for address and frequency
     DEFAULT_ADDRESS = 0
