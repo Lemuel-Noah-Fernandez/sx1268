@@ -72,8 +72,9 @@ def send_deal():
     print("")
     # print("input a string such as \033[1;32m0,868,Hello World\033[0m,it will send `Hello World` to lora node device of address 0 with 868M ")
     print("Please input and press Enter key:",end='',flush=True)
-    FREQ_433 = 433
     DEFAULT_ADDRESS = 0
+    FREQ_433 = 433
+    
 
     while True:
         rec = sys.stdin.read(1)
@@ -84,16 +85,15 @@ def send_deal():
             sys.stdout.flush()
 
     get_t = get_rec.split(",")
-    get_t[0] = DEFAULT_ADDRESS
-    get_t[1] = FREQ_433
 
-    offset_frequence = int(get_t[1])-(850 if int(get_t[1])>850 else 410)
+    offset_frequence = int(FREQ_433)-(850 if int(FREQ_433)>850 else 410)
     #
     # the sending message format
     #
     #         receiving node              receiving node                   receiving node           own high 8bit           own low 8bit                 own 
     #         high 8bit address           low 8bit address                    frequency                address                 address                  frequency             message payload
-    data = bytes([int(get_t[0])>>8]) + bytes([int(get_t[0])&0xff]) + bytes([offset_frequence]) + bytes([node.addr>>8]) + bytes([node.addr&0xff]) + bytes([node.offset_freq]) + get_t[2].encode()
+    # data = bytes([int(get_t[0])>>8]) + bytes([int(get_t[0])&0xff]) + bytes([offset_frequence]) + bytes([node.addr>>8]) + bytes([node.addr&0xff]) + bytes([node.offset_freq]) + get_t[2].encode()
+    data = bytes([int(DEFAULT_ADDRESS)>>8]) + bytes([int(DEFAULT_ADDRESS)&0xff]) + bytes([offset_frequence]) + bytes([node.addr>>8]) + bytes([node.addr&0xff]) + bytes([node.offset_freq]) + get_t[2].encode()
 
     node.send(data)
     print('\x1b[2A',end='\r')
