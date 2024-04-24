@@ -70,8 +70,10 @@ node = sx126x.sx126x(serial_num = "/dev/ttyS0",freq=433,addr=0,power=22,rssi=Fal
 def send_deal():
     get_rec = ""
     print("")
-    print("input a string such as \033[1;32m0,868,Hello World\033[0m,it will send `Hello World` to lora node device of address 0 with 868M ")
-    print("please input and press Enter key:",end='',flush=True)
+    # print("input a string such as \033[1;32m0,868,Hello World\033[0m,it will send `Hello World` to lora node device of address 0 with 868M ")
+    print("Please input and press Enter key:",end='',flush=True)
+    FREQ_433 = 433
+    DEFAULT_ADDRESS = 0
 
     while True:
         rec = sys.stdin.read(1)
@@ -82,6 +84,8 @@ def send_deal():
             sys.stdout.flush()
 
     get_t = get_rec.split(",")
+    get_t[0] = DEFAULT_ADDRESS
+    get_t[1] = FREQ_433
 
     offset_frequence = int(get_t[1])-(850 if int(get_t[1])>850 else 410)
     #
