@@ -224,9 +224,10 @@ try:
             
         # Received commands to json file
         received_data = node.receive()
+        print(f"Received data: {received_data}")
         if received_data:
             handle_received_data(received_data)
-        node.receive()
+        #node.receive()
         
         # timer,send messages automatically
         
