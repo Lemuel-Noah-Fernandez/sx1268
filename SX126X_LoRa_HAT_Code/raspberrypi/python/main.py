@@ -44,7 +44,6 @@ def handle_received_data(data):
         if len(components) == 3:
             component, component_id, command = components
             append_to_json(component, component_id, command)
-            print("Received command stored successfully!")
         else:
             print("Received data format incorrect!")
     except Exception as e:
@@ -53,10 +52,9 @@ def handle_received_data(data):
 def clear_json_file(path):
     """ Clears a json file """
     try:
-        # Open the file in write mode, which clears the existing content
+        # Open the file in write mode to clear contents
         with open(path, 'w') as file:
-            file.write('[]')  # Write an empty JSON array to indicate no data
-        print("JSON file cleared successfully.")
+            file.write('[]')  
     except Exception as e:
         print(f"Failed to clear JSON file: {str(e)}")
 
