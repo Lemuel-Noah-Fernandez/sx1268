@@ -88,6 +88,9 @@ def main():
             # Parse received commands into json file
             if received_data:
                 handle_received_data(received_data)
+    except KeyboardInterrupt:
+        print("Closing connection")
+        pass
     except Exception as e:
         print(f"An error occurred: {str(e)}")
     finally:
