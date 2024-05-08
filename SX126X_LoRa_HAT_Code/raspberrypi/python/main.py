@@ -54,7 +54,7 @@ def handle_received_data(data):
     # Decode and parse the received data
     try:
         # message = data.decode()
-        components = message.split(',')
+        components = data.split(',')
         if len(components) == 3:
             component, component_id, command = components
             append_to_json(component, component_id, command)
