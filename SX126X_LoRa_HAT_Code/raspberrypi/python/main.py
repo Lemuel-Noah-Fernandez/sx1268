@@ -50,6 +50,16 @@ def handle_received_data(data):
     except Exception as e:
         print(f"Error handling received data: {str(e)}")
 
+def clear_json_file(path):
+    """ Clears a json file """
+    try:
+        # Open the file in write mode, which clears the existing content
+        with open(path, 'w') as file:
+            file.write('[]')  # Write an empty JSON array to indicate no data
+        print("JSON file cleared successfully.")
+    except Exception as e:
+        print(f"Failed to clear JSON file: {str(e)}")
+
 def send_deal():
     """ Send data after taking input from the user. """
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
@@ -71,6 +81,10 @@ def send_deal():
 
 def main():
     """ Main function to run the script. """
+    # Clear json file
+    clear_json_file(json_file_path)
+
+    # Listen for commands to receive/send
     try:
         print("Press \033[1;32mEsc\033[0m to exit")
         print("Press \033[1;32mi\033[0m to send")
@@ -89,7 +103,7 @@ def main():
             if received_data:
                 handle_received_data(received_data)
     except KeyboardInterrupt:
-        print("Closing connection")
+        print("\nClosing connection")
         pass
     except Exception as e:
         print(f"An error occurred: {str(e)}")
