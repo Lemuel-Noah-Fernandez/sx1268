@@ -25,9 +25,44 @@ import select
 import termios
 import tty
 from threading import Timer
+import json
 
 old_settings = termios.tcgetattr(sys.stdin)
 tty.setcbreak(sys.stdin.fileno())
+
+# File path of received commands for visualisation
+json_file_path = 'received_commands.json'
+
+# Json parsing and integration
+def append_to_json(component, component_id, command):
+    command_data = {
+        "component": component,
+        "component_id": component_id,
+        "command": command
+    }
+    try:
+        with open(json_file_path, 'r+') as file:
+            data = json.load(file)
+            data.append(command_data)
+            file.seek(0)
+            json.dump(data, file, indent=4)
+    except (FileNotFoundError, json.JSONDecodeError):
+        with open(json_file_path, 'w') as file:
+            json.dump([command_data], file, indent=4)
+
+def handle_received_data(data):
+    # Decode and parse the received data
+    try:
+        message = data.decode()
+        components = message.split(',')
+        if len(components) == 3:
+            component, component_id, command = components
+            append_to_json(component, component_id, command)
+            print("Received command stored successfully!")
+        else:
+            print("Received data format incorrect!")
+    except Exception as e:
+        print(f"Error handling received data: {str(e)}")
 
 
 #
@@ -177,7 +212,6 @@ try:
                 print("Press \033[1;32mc\033[0m   to exit the send task")
                 timer_task = Timer(seconds,send_cpu_continue)
                 timer_task.start()
-                
                 while True:
                     if sys.stdin.read(1) == '\x63':
                         timer_task.cancel()
@@ -188,6 +222,10 @@ try:
 
             sys.stdout.flush()
             
+        # Received commands to json file
+        received_data = node.receive()
+        if received_data:
+            handle_received_data(received_data)
         node.receive()
         
         # timer,send messages automatically
