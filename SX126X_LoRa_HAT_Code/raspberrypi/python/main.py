@@ -50,10 +50,12 @@ def append_to_json(component, component_id, command):
         with open(json_file_path, 'w') as file:
             json.dump([command_data], file, indent=4)
 
+
 def handle_received_data(data):
-    # Decode and parse the received data
     try:
-        # message = data.decode()
+        # Ensure data is a string and then split it
+        if isinstance(data, bytes):
+            data = data.decode('utf-8')  # Decoding bytes to string if necessary
         components = data.split(',')
         if len(components) == 3:
             component, component_id, command = components
@@ -63,6 +65,7 @@ def handle_received_data(data):
             print("Received data format incorrect!")
     except Exception as e:
         print(f"Error handling received data: {str(e)}")
+
 
 
 #
