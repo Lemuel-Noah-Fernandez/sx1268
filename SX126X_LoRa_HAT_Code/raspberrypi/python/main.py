@@ -53,7 +53,7 @@ def append_to_json(component, component_id, command):
 def handle_received_data(data):
     # Decode and parse the received data
     try:
-        message = data.decode()
+        # message = data.decode()
         components = message.split(',')
         if len(components) == 3:
             component, component_id, command = components
@@ -226,7 +226,7 @@ try:
         received_data = node.receive()
         if received_data:
             handle_received_data(received_data)
-            print(f"Received data: {received_data}")
+            # print(f"Received data: {received_data}")
         #node.receive()
         
         # timer,send messages automatically

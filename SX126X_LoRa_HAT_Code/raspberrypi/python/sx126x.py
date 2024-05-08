@@ -259,7 +259,7 @@ class sx126x:
             print("receive message from node address with frequence\033[1;32m %d,%d.125MHz\033[0m"%((r_buff[0]<<8)+r_buff[1],r_buff[2]+self.start_freq),end='\r\n',flush = True)
             print("message is "+str(r_buff[3:]),end='\r\n')
 
-            message = r_buff[3:].decode('utf-8', errors='ignore')
+            message = r_buff[3:]
             
             # print the rssi
             if self.rssi:
