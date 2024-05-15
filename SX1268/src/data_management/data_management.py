@@ -36,6 +36,7 @@ class DataManager:
 
     def convert_bytes_to_json(self, raw_data, ssid):
         """ Convert raw byte data to JSON format based on SSID. """
+        raw_data = bytes.fromhex(raw_data)
         if ssid == 0b1111:  # Science Data
             return self.parse_science_data(raw_data)
         elif ssid == 0b1110:  # Whole Orbit Data
