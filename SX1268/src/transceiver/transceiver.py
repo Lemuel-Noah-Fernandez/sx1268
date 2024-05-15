@@ -72,8 +72,15 @@ class Transceiver(SX126x):
                     self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
                 else:
-                    print("Received non-byte data")
-                    return None
+                    decoder = AX25UIFrameDecoder()
+                    decoded_frame = decoder.decode_ax25_frame(data)
+                    ssid = decoded_frame["d_ssid"]
+                    info_data = decoded_frame["info"]
+                    json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
+                    self.data_manager.append_to_json(json_data, ssid)
+                    return decoded_frame
+                    # print("Received non-byte data")
+                    # return None
             except Exception as e:
                 print(f"Error handling received data: {str(e)}")
                 return None
