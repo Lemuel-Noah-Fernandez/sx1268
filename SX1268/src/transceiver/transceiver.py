@@ -63,15 +63,14 @@ class Transceiver(SX126x):
 
         if data:
             try:
-                print(f"Data: {data}")
-                print(f"Data type: {type(data)}")
                 if isinstance(data, bytes):
                     decoder = AX25UIFrameDecoder()
                     decoded_frame = decoder.decode_ax25_frame(data)
                     ssid = decoded_frame["d_ssid"]
                     info_data = decoded_frame["info"]
-                    json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
-                    self.data_manager.append_to_json(json_data, ssid)
+                    print(f"Info: {info_data}")
+                    # json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
+                    # self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
                 else:
                     print("Received non-byte data")
