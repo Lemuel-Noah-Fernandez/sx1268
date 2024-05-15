@@ -25,8 +25,7 @@ class Transceiver(SX126x):
         self.json_file_path = 'received_commands.json'
     
     def send_deal(
-            self, 
-            message: str
+            self
         ) -> None:
         """Sends a message after encoding
 
