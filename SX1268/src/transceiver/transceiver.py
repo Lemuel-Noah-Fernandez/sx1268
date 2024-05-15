@@ -1,11 +1,11 @@
 import json
 import sys
 import termios
-from sx126x import SX126x
+from .sx126x import SX126x
 import struct
 from AX25UI import AX25UIFrameDecoder, AX25UIFrame
 
-class Transceiver(sx126x):
+class Transceiver(SX126x):
     def __init__(
             self, 
             serial_num="/dev/ttyS0", 
