@@ -2,6 +2,7 @@ import json
 import sys
 import termios
 import sx126x
+from sx126x import sx126x
 import struct
 from AX25UI import AX25UIFrameDecoder, AX25UIFrame
 
