@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 import serial
 import time
 
-class sx126x:
+class SX126x:
 
     M0 = 22
     M1 = 27
