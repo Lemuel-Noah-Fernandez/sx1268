@@ -53,7 +53,7 @@ class DataManager:
 
     def parse_science_data(self, raw_data):
         """ Parse science data from raw bytes to JSON. """
-        format_string = '<fff fff f i h'
+        format_string = '<fff fff f i xxh'
         print(f"Expected Size: {struct.calcsize(format_string)} bytes")
         unpacked_data = struct.unpack(format_string, raw_data)
         return {
