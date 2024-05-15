@@ -36,6 +36,7 @@ class DataManager:
 
     def convert_bytes_to_json(self, raw_data, ssid):
         """ Convert raw byte data to JSON format based on SSID. """
+        print(f"Raw Data Length: {len(raw_data)} bytes")
         # raw_data = bytes.fromhex(raw_data_str)
         if ssid == 0b1111:  # Science Data
             return self.parse_science_data(raw_data)
@@ -53,6 +54,7 @@ class DataManager:
     def parse_science_data(self, raw_data):
         """ Parse science data from raw bytes to JSON. """
         format_string = '<fff fff f i i'
+        print(f"Expected Size: {struct.calcsize(format_string)} bytes")
         unpacked_data = struct.unpack(format_string, raw_data)
         return {
             "debris_position_x": unpacked_data[0],
