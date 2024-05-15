@@ -36,17 +36,25 @@ class Transceiver(SX126x):
         Returns:
             _type_: _description_
         """
+        # Receive message from user
         print("\nPlease input your commands in the format <component>,<component_id>,<command>: ", end='')
         message = input()
+
+        # Frame encoder
+        ssid_type = 0b0111  # Command data type
+        ax25_frame = AX25UIFrame(message, ssid_type)
+        frame = ax25_frame.create_frame()
+
+        # Package encoder details
         DEFAULT_ADDRESS = 0
-        offset_frequency = self.freq - (850 if self.freq > 850 else 410)
+        offset_frequency = self.freq - (850 if self.freq > 850 else 410)        
         data = (bytes([DEFAULT_ADDRESS >> 8]) + 
                 bytes([DEFAULT_ADDRESS & 0xff]) +
                 bytes([offset_frequency]) + 
                 bytes([self.addr >> 8]) + 
                 bytes([self.addr & 0xff]) + 
                 bytes([self.offset_freq]) + 
-                message)
+                frame)
         self.send(data)
         print("Message sent!")
         return None

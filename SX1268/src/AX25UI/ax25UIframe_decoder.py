@@ -2,19 +2,29 @@ import struct
 
 class AX25UIFrameDecoder:
     def decode_ax25_frame(self, frame):
-        """Decode an AX.25 frame and extract the source, destination, SSID, and info fields."""
+        """Decode an AX.25 frame and extract the relevant fields"""
+        # Ensure there are beginning and ending flags
         if frame[0] != 0x7E or frame[-1] != 0x7E:
             raise ValueError("Invalid AX.25 frame")
 
+        # Address field - destination
         destination_callsign = ''.join([chr((frame[i] >> 1) & 0x7F) for i in range(1, 7)]).strip()
         destination_ssid = (frame[7] >> 1) & 0x0F
 
+        # Address field - source
         source_callsign = ''.join([chr((frame[i] >> 1) & 0x7F) for i in range(8, 14)]).strip()
         source_ssid = (frame[14] >> 1) & 0x0F
 
+        # Control
         control_field = frame[15]
+
+        # PID
         pid_field = frame[16]
+
+        # Info
         info_field = frame[17:-3].decode('ascii')
+
+        # FCS
         received_fcs = frame[-3:-1]
         calculated_fcs = self.compute_fcs(frame[1:-3])
 
@@ -22,13 +32,13 @@ class AX25UIFrameDecoder:
             raise ValueError("FCS check failed")
 
         return {
-            'destination_callsign': destination_callsign,
-            'destination_ssid': destination_ssid,
-            'source_callsign': source_callsign,
-            'source_ssid': source_ssid,
-            'control_field': control_field,
-            'pid_field': pid_field,
-            'info_field': info_field
+            'd_call': destination_callsign,
+            'd_ssid': destination_ssid,
+            's_call': source_callsign,
+            's_ssid': source_ssid,
+            'control': control_field,
+            'pid': pid_field,
+            'info': info_field
         }
 
     def compute_fcs(self, frame):
