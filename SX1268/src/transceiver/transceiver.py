@@ -36,6 +36,7 @@ class Transceiver(SX126x):
             _type_: _description_
         """
         # Receive message from user
+        termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
         print("\nPlease input your commands in the format <component>,<component_id>,<command>: ", end='')
         message = input()
 
