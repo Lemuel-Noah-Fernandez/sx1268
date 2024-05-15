@@ -69,8 +69,8 @@ class Transceiver(SX126x):
                     ssid = decoded_frame["d_ssid"]
                     info_data = decoded_frame["info"]
                     print(f"Info: {info_data}, ssid: {ssid}")
-                    # json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
-                    # self.data_manager.append_to_json(json_data, ssid)
+                    json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
+                    self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
                 else:
                     print("Received non-byte data")
