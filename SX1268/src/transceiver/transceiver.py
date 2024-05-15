@@ -2,7 +2,7 @@ import json
 import sys
 import termios
 from .sx126x import SX126x
-import struct
+import tty
 from AX25UI import AX25UIFrameDecoder, AX25UIFrame
 
 class Transceiver(SX126x):
@@ -50,6 +50,7 @@ class Transceiver(SX126x):
                 frame)
         self.send(data)
         print("Message sent!")
+        tty.setcbreak(sys.stdin.fileno())
         return None
 
 
