@@ -22,7 +22,7 @@ class AX25UIFrameDecoder:
         pid_field = frame[16]
 
         # Info
-        info_field = frame[17:-3].decode('ascii')
+        info_field = frame[17:-3]#.decode('ascii')
 
         # FCS
         received_fcs = frame[-3:-1]

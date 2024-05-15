@@ -34,7 +34,7 @@ class DataManager:
                 print(f"Failed to clear JSON file {path}: {str(e)}")
 
 
-    def convert_bytes_to_json(self, raw_data_str, ssid):
+    def convert_bytes_to_json(self, raw_data, ssid):
         """ Convert raw byte data to JSON format based on SSID. """
         # raw_data = bytes.fromhex(raw_data_str)
         if ssid == 0b1111:  # Science Data
