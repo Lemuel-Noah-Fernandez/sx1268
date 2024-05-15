@@ -63,12 +63,18 @@ class Transceiver(SX126x):
 
         if data:
             try:
+                # Make sure data is in byts
                 if isinstance(data, bytes):
+                    # Initialise decoder
                     decoder = AX25UIFrameDecoder()
                     decoded_frame = decoder.decode_ax25_frame(data)
+
+                    # Take out ssid and info
                     ssid = decoded_frame["d_ssid"]
                     info_data = decoded_frame["info"]
                     print(f"Info: {info_data}, ssid: {ssid}")
+
+                    # Append to json files
                     json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
                     self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
