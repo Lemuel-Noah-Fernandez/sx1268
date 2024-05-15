@@ -10,6 +10,10 @@ def main():
     # Initialize the transceiver object
     transceiver = Transceiver(serial_num="/dev/ttyS0", freq=433, addr=0, power=22, rssi=False, air_speed=2400, relay=False)
 
+    # Set the terminal to non-canonical mode to immediately process input
+    # old_settings = termios.tcgetattr(sys.stdin)
+    tty.setcbreak(sys.stdin.fileno())
+
     # Clear json file
     # clear_json_file(json_file_path)
 

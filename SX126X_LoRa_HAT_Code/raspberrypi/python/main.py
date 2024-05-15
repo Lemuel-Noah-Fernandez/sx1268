@@ -59,7 +59,7 @@ def clear_json_file(path):
         print(f"Failed to clear JSON file: {str(e)}")
 
 def send_deal():
-    """ Send data after taking input from the user. """
+    """ Send data after taking input from the user"""
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
     print("\nPlease input your commands in the format <component>,<component_id>,<command>: ", end='')
     message = input()
