@@ -65,7 +65,7 @@ class AX25UIFrame:
         frame.append(self.PID)
 
         # Information
-        frame.extend(self.info.encode('ascii'))
+        frame.extend(self.info)#.encode('ascii'))
 
         # Compute and add FCS
         fcs = self.compute_fcs(frame[1:])
