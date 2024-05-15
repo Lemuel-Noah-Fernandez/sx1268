@@ -4,6 +4,7 @@ import termios
 from .sx126x import SX126x
 import tty
 from AX25UI import AX25UIFrameDecoder, AX25UIFrame
+from data_management import DataManager
 
 class Transceiver(SX126x):
     def __init__(
@@ -20,6 +21,9 @@ class Transceiver(SX126x):
         
         # Terminal settings
         self.old_settings = termios.tcgetattr(sys.stdin)
+
+        # Data manajer initialisation
+        self.data_manager = DataManager()
 
         # File path of received commands for visualization
         self.json_file_path = 'received_commands.json'
@@ -62,6 +66,10 @@ class Transceiver(SX126x):
                 if isinstance(data, bytes):
                     decoder = AX25UIFrameDecoder()
                     decoded_frame = decoder.decode_ax25_frame(data)
+                    ssid = decoded_frame["d_ssid"]
+                    info_data = decoded_frame["info"]
+                    json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
+                    self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
                 else:
                     print("Received non-byte data")

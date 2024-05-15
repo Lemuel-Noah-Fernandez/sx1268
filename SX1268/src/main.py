@@ -33,10 +33,10 @@ def main():
             received_data = transceiver.receive_data()
 
             # # Parse received commands into json file
-            if received_data:
-                if received_data["d_ssid"] == 0b1111:
-                    print("Receiving scientific")
-                print("Received Data:", received_data)
+            # if received_data:
+            #     if received_data["d_ssid"] == 0b1111:
+            #         print("Receiving scientific")
+            #     print("Received Data:", received_data)
             # if received_data:
             #     handle_received_data(received_data)
     except KeyboardInterrupt:
