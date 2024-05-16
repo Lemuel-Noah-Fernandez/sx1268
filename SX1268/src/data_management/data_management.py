@@ -2,6 +2,7 @@ import json
 import struct
 
 class DataManager:
+    """ A class that maintains and updates json files depending on the type of data downlinked """
     def __init__(self):
         self.json_files = {
             0b1110: 'wod_data.json',       # Whole Orbit Data
@@ -16,9 +17,13 @@ class DataManager:
         self.time_field = None
         self.datasets = []
 
+    # Various static methods to convert 8 bit unsigned integers back to floats
     @staticmethod
     def decode_voltage(voltage):
-        return (voltage + 60) / 20.0
+        if voltage == 0:
+            return 0.0
+        else:
+            return (voltage + 60) / 20.0
 
     @staticmethod
     def decode_current(current):
@@ -46,7 +51,7 @@ class DataManager:
                 json.dump([data], file, indent=4)
 
     def clear_json_files(self):
-        """ Clears all json files on startup"""
+        """ Clears all json files on startup """
         for path in self.json_files.values():
             try:
                 with open(path, 'w') as file:
@@ -55,7 +60,19 @@ class DataManager:
                 print(f"Failed to clear JSON file {path}: {str(e)}")
 
     def convert_bytes_to_json(self, raw_data, ssid):
-        """ Convert raw byte data to JSON format based on SSID. """
+        """ Convert raw byte data to JSON based on SSID """
+        # Print data type received
+        data_type = {
+            0b1111: 'science',
+            0b1110: 'wod',
+            0b1101: 'satellite_pose',
+            0b1011: 'misc',
+            0b0111: 'commands'
+        }.get(ssid, 'unknown')
+
+        print(f"Received {data_type} data")
+
+        # Parse differently depending on ssid
         if ssid == 0b1111:  # Science Data
             return self.parse_science_data(raw_data)
         elif ssid == 0b1110:  # Whole Orbit Data
@@ -70,7 +87,7 @@ class DataManager:
             return {"raw_data": raw_data.hex()}
 
     def parse_science_data(self, raw_data):
-        """ Parse science data from raw bytes to JSON. """
+        """ Parse science data to JSON """
         format_string = '<fff fff f i i'
         unpacked_data = struct.unpack(format_string, raw_data)
         return {
@@ -86,7 +103,7 @@ class DataManager:
         }
 
     def parse_satellite_pose(self, raw_data):
-        """ Parse satellite pose data from raw bytes to JSON. """
+        """ Parse satellite pose data to JSON """
         format_string = '<fff ffff fff'
         unpacked_data = struct.unpack(format_string, raw_data)
         return {
@@ -103,45 +120,44 @@ class DataManager:
         }
 
     def parse_misc_data(self, raw_data):
-        """ Parse miscellaneous data from raw bytes to JSON. """
+        """ Parse miscellaneous data to JSON """
         return {
-            "raw_data": raw_data.hex()
+            "Data": raw_data.decode('ascii')
         }
 
     def parse_wod_data(self, raw_data):
         """Parse WOD data from raw bytes to JSON."""
-        # Unpack the packet identifier (1 byte)
+        # Unpack the packet identifier (first vs second half of wod)
         packet_id = raw_data[0]
         dataset_size = struct.calcsize('8B')
 
         if packet_id == 1:
-            # This is the first packet, so we need to parse the satellite ID and time field
+            # First packet has satellite_id and time as well as half the datasets
+            # Satellite_id
             satellite_id_format = '5s'
             satellite_id_size = struct.calcsize(satellite_id_format)
             self.satellite_id = struct.unpack(satellite_id_format, raw_data[1:1 + satellite_id_size])[0].decode('ascii')
 
+            # Time_field
             time_format = '<I'
             time_size = struct.calcsize(time_format)
             self.time_field = struct.unpack(time_format, raw_data[1 + satellite_id_size:1 + satellite_id_size + time_size])[0]
 
+            # Datasets
             dataset_data = raw_data[1 + satellite_id_size + time_size:]
-            num_datasets = 16  # First packet contains 16 datasets
 
         elif packet_id == 2:
-            # This is the second packet, so we only need to parse the datasets
+            # Second half of wod data only has the other half of the datasets
             dataset_data = raw_data[1:]
-            num_datasets = 16  # Second packet contains 16 datasets
 
-        else:
-            raise ValueError(f"Unknown packet_id: {packet_id}")
-
-        for i in range(num_datasets):
+        # Combining datasets
+        for i in range(16):
             if len(dataset_data) < (i + 1) * dataset_size:
                 break
             dataset_chunk = dataset_data[i * dataset_size:(i + 1) * dataset_size]
             unpacked_dataset = struct.unpack('8B', dataset_chunk)
             self.datasets.append({
-                "satellite_mode": unpacked_dataset[0],
+                "satellite_mode": int(unpacked_dataset[0]),
                 "battery_voltage": self.decode_voltage(unpacked_dataset[1]),
                 "battery_current": self.decode_current(unpacked_dataset[2]),
                 "regulated_bus_current_3v3": self.decode_bus_current(unpacked_dataset[3]),
@@ -151,15 +167,16 @@ class DataManager:
                 "temperature_battery": self.decode_temperature(unpacked_dataset[7])
             })
 
+        # Final parsing of wod data
         if packet_id == 2:
             parsed_data = {
                 "satellite_id": self.satellite_id,
                 "time_field": self.time_field,
                 "datasets": self.datasets
             }
-            # Clear the stored data for the next complete set of packets
+            # Clear the stored data for the next packets
             self.satellite_id = None
             self.time_field = None
             self.datasets = []
             return parsed_data
-        return None  # Return None if only the first packet is processed so far
+        return None
