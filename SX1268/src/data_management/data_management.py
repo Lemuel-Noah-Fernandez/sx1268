@@ -139,7 +139,7 @@ class DataManager:
         if packet_id == 1:
             # This is the first packet, so we need to parse the satellite ID and time field
             # Unpack the satellite ID (5 bytes)
-            satellite_id_format = 's'
+            satellite_id_format = '5s'
             satellite_id_size = struct.calcsize(satellite_id_format)
             satellite_id = struct.unpack(satellite_id_format, raw_data[1:1 + satellite_id_size])[0].decode('ascii')
 
