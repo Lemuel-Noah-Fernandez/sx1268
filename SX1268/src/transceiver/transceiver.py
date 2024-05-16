@@ -72,12 +72,9 @@ class Transceiver(SX126x):
                     # Take out ssid and info
                     ssid = decoded_frame["d_ssid"]
                     info_data = decoded_frame["info"]
-                    print(f"Info: {info_data}, ssid: {ssid}")
 
                     # Append to json files
                     json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
-                    print(f"Json data: {json_data}")
-                    print(f"Debris Position X: {json_data.get('debris_position_x')}")
                     self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
                 else:
