@@ -85,12 +85,12 @@ class DataManager:
             "velocity_z": unpacked_data[9],
         }
 
-    def parse_wod_data(self, raw_data):
-        """ Parse WOD data from raw bytes to JSON. """
-        # Add the specific unpacking format and data structure for WOD data
-        return {
-            "raw_data": raw_data.hex()
-        }
+    # def parse_wod_data(self, raw_data):
+    #     """ Parse WOD data from raw bytes to JSON. """
+    #     # Add the specific unpacking format and data structure for WOD data
+    #     return {
+    #         "raw_data": raw_data.hex()
+        # }
 
     def parse_misc_data(self, raw_data):
         """ Parse miscellaneous data from raw bytes to JSON. """
