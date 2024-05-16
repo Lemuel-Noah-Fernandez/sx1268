@@ -85,12 +85,6 @@ class DataManager:
             "velocity_z": unpacked_data[9],
         }
 
-    # def parse_wod_data(self, raw_data):
-    #     """ Parse WOD data from raw bytes to JSON. """
-    #     # Add the specific unpacking format and data structure for WOD data
-    #     return {
-    #         "raw_data": raw_data.hex()
-        # }
 
     def parse_misc_data(self, raw_data):
         """ Parse miscellaneous data from raw bytes to JSON. """
@@ -99,39 +93,120 @@ class DataManager:
             "raw_data": raw_data.hex()
         }
     
+    # def parse_wod_data(self, raw_data):
+    #     """Parse WOD data from raw bytes to JSON."""
+    #     # Unpack time field (32 bits) and satellite ID (3 bytes)
+    #     time_format = '<I'
+    #     time_size = struct.calcsize(time_format)
+    #     satellite_id_size = 3
+    #     time_field = struct.unpack(time_format, raw_data[:time_size])[0]
+    #     satellite_id = raw_data[time_size:time_size + satellite_id_size].decode('ascii')
+
+    #     # Unpack datasets (each 57 bits, total 32 datasets)
+    #     dataset_format = '7B'
+    #     dataset_size = struct.calcsize(dataset_format)
+    #     datasets = []
+    #     dataset_data = raw_data[time_size + satellite_id_size:]
+
+    #     for i in range(32):  # Assuming 32 datasets
+    #         if len(dataset_data) < (i + 1) * dataset_size:
+    #             break
+    #         dataset_chunk = dataset_data[i * dataset_size:(i + 1) * dataset_size]
+    #         unpacked_dataset = struct.unpack(dataset_format, dataset_chunk)
+    #         datasets.append({
+    #             "satellite_mode": bool(unpacked_dataset[0]),
+    #             "battery_voltage": unpacked_dataset[1],
+    #             "battery_current": unpacked_dataset[2],
+    #             "regulated_bus_current_3v3": unpacked_dataset[3],
+    #             "regulated_bus_current_5v": unpacked_dataset[4],
+    #             "temperature_comm": unpacked_dataset[5],
+    #             "temperature_eps": unpacked_dataset[6],
+    #             "temperature_battery": unpacked_dataset[7]
+    #         })
+
+    #     return {
+    #         "packet_time_size": time_field,
+    #         "satellite_id": satellite_id,
+    #         "datasets": datasets
+    #     }
+
+
     def parse_wod_data(self, raw_data):
         """Parse WOD data from raw bytes to JSON."""
-        # Unpack time field (32 bits) and satellite ID (3 bytes)
-        time_format = '<I'
-        time_size = struct.calcsize(time_format)
-        satellite_id_size = 3
-        time_field = struct.unpack(time_format, raw_data[:time_size])[0]
-        satellite_id = raw_data[time_size:time_size + satellite_id_size].decode('ascii')
+        # Unpack the packet identifier (1 byte)
+        packet_id = raw_data[0]
 
-        # Unpack datasets (each 57 bits, total 32 datasets)
-        dataset_format = '7B'
-        dataset_size = struct.calcsize(dataset_format)
-        datasets = []
-        dataset_data = raw_data[time_size + satellite_id_size:]
+        if packet_id == 1:
+            # This is the first packet, so we need to parse the satellite ID and time field
+            # Unpack the satellite ID (5 bytes)
+            satellite_id_format = 's'
+            satellite_id_size = struct.calcsize(satellite_id_format)
+            satellite_id = struct.unpack(satellite_id_format, raw_data[1:1 + satellite_id_size])[0].decode('ascii')
 
-        for i in range(32):  # Assuming 32 datasets
-            if len(dataset_data) < (i + 1) * dataset_size:
-                break
-            dataset_chunk = dataset_data[i * dataset_size:(i + 1) * dataset_size]
-            unpacked_dataset = struct.unpack(dataset_format, dataset_chunk)
-            datasets.append({
-                "satellite_mode": bool(unpacked_dataset[0]),
-                "battery_voltage": unpacked_dataset[1],
-                "battery_current": unpacked_dataset[2],
-                "regulated_bus_current_3v3": unpacked_dataset[3],
-                "regulated_bus_current_5v": unpacked_dataset[4],
-                "temperature_comm": unpacked_dataset[5],
-                "temperature_eps": unpacked_dataset[6],
-                "temperature_battery": unpacked_dataset[7]
-            })
+            # Unpack the time field (32 bits)
+            time_format = '<I'
+            time_size = struct.calcsize(time_format)
+            time_field = struct.unpack(time_format, raw_data[1 + satellite_id_size:1 + satellite_id_size + time_size])[0]
 
-        return {
-            "packet_time_size": time_field,
-            "satellite_id": satellite_id,
-            "datasets": datasets
-        }
+            # Unpack the first 16 datasets
+            dataset_format = '8B'
+            dataset_size = struct.calcsize(dataset_format)
+            datasets = []
+            dataset_data = raw_data[1 + satellite_id_size + time_size:]
+            num_datasets = 16  # First packet contains 16 datasets
+
+            for i in range(num_datasets):
+                if len(dataset_data) < (i + 1) * dataset_size:
+                    break
+                dataset_chunk = dataset_data[i * dataset_size:(i + 1) * dataset_size]
+                unpacked_dataset = struct.unpack(dataset_format, dataset_chunk)
+                datasets.append({
+                    "satellite_mode": unpacked_dataset[0],
+                    "battery_voltage": unpacked_dataset[1],
+                    "battery_current": unpacked_dataset[2],
+                    "regulated_bus_current_3v3": unpacked_dataset[3],
+                    "regulated_bus_current_5v": unpacked_dataset[4],
+                    "temperature_comm": unpacked_dataset[5],
+                    "temperature_eps": unpacked_dataset[6],
+                    "temperature_battery": unpacked_dataset[7]
+                })
+
+            parsed_data = {
+                "satellite_id": satellite_id,
+                "time_field": time_field,
+                "datasets": datasets
+            }
+
+        elif packet_id == 2:
+            # This is the second packet, so we only need to parse the datasets
+            dataset_format = '8B'
+            dataset_size = struct.calcsize(dataset_format)
+            datasets = []
+            dataset_data = raw_data[1:]
+            num_datasets = 16  # Second packet contains 16 datasets
+
+            for i in range(num_datasets):
+                if len(dataset_data) < (i + 1) * dataset_size:
+                    break
+                dataset_chunk = dataset_data[i * dataset_size:(i + 1) * dataset_size]
+                unpacked_dataset = struct.unpack(dataset_format, dataset_chunk)
+                datasets.append({
+                    "satellite_mode": unpacked_dataset[0],
+                    "battery_voltage": unpacked_dataset[1],
+                    "battery_current": unpacked_dataset[2],
+                    "regulated_bus_current_3v3": unpacked_dataset[3],
+                    "regulated_bus_current_5v": unpacked_dataset[4],
+                    "temperature_comm": unpacked_dataset[5],
+                    "temperature_eps": unpacked_dataset[6],
+                    "temperature_battery": unpacked_dataset[7]
+                })
+
+            parsed_data = {
+                "datasets": datasets
+            }
+
+        else:
+            raise ValueError(f"Unknown packet_id: {packet_id}")
+
+        return parsed_data
+
