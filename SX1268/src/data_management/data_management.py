@@ -92,16 +92,43 @@ class DataManager:
             "raw_data": raw_data.hex()
         }
 
-    def parse_commands_data(self, raw_data):
-        """ Parse commands data from raw bytes to JSON. """
-        # Add the specific unpacking format and data structure for commands data
-        return {
-            "raw_data": raw_data.hex()
-        }
-
     def parse_misc_data(self, raw_data):
         """ Parse miscellaneous data from raw bytes to JSON. """
         # Add the specific unpacking format and data structure for misc data
         return {
             "raw_data": raw_data.hex()
+        }
+    
+    def parse_wod_data(self, raw_data):
+        """Parse WOD data from raw bytes to JSON."""
+        # Unpack time field (32 bits)
+        time_format = '<I'
+        time_size = struct.calcsize(time_format)
+        time_field = struct.unpack(time_format, raw_data[:time_size])[0]
+
+        # Unpack datasets (each 57 bits, total 32 datasets)
+        dataset_format = '8B'
+        dataset_size = struct.calcsize(dataset_format)
+        datasets = []
+        dataset_data = raw_data[time_size:]
+
+        for i in range(32):  # Assuming 32 datasets
+            if len(dataset_data) < (i + 1) * dataset_size:
+                break
+            dataset_chunk = dataset_data[i*dataset_size:(i+1)*dataset_size]
+            unpacked_dataset = struct.unpack(dataset_format, dataset_chunk)
+            datasets.append({
+                "satellite_mode": unpacked_dataset[0],
+                "battery_voltage": unpacked_dataset[1],
+                "battery_current": unpacked_dataset[2],
+                "regulated_bus_current_3v3": unpacked_dataset[3],
+                "regulated_bus_current_5v": unpacked_dataset[4],
+                "temperature_comm": unpacked_dataset[5],
+                "temperature_eps": unpacked_dataset[6],
+                "temperature_battery": unpacked_dataset[7],
+            })
+
+        return {
+            "packet_time_size": time_field,
+            "datasets": datasets
         }
