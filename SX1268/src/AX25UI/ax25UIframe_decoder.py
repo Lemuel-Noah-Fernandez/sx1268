@@ -4,6 +4,7 @@ class AX25UIFrameDecoder:
     def decode_ax25_frame(self, frame):
         """Decode an AX.25 frame and extract the relevant fields"""
         # Ensure there are beginning and ending flags
+        print(f"Frame: {frame}")
         print(f"First frame: {frame[0]}")
         print(f"Last frame: {frame[-1]}")
         if frame[0] != 0x7E or frame[-1] != 0x7E:
