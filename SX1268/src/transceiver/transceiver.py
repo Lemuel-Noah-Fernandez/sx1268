@@ -53,7 +53,6 @@ class Transceiver(SX126x):
                 bytes([self.offset_freq]) + 
                 frame)
         self.send(data)
-        print(f"Message: {data}")
         print("Message sent!")
         tty.setcbreak(sys.stdin.fileno())
         return None

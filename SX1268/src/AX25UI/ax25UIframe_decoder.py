@@ -4,8 +4,10 @@ class AX25UIFrameDecoder:
     def decode_ax25_frame(self, frame):
         """Decode an AX.25 frame and extract the relevant fields"""
         # Ensure there are beginning and ending flags
-        # if frame[0] != 0x7E or frame[-1] != 0x7E:
-        #     raise ValueError("Invalid AX.25 frame")
+        print(f"First frame: {frame[0]}")
+        print(f"Last frame: {frame[-1]}")
+        if frame[0] != 0x7E or frame[-1] != 0x7E:
+            raise ValueError("Invalid AX.25 frame")
 
         # Address field - destination
         destination_callsign = ''.join([chr((frame[i] >> 1) & 0x7F) for i in range(1, 7)]).strip()
