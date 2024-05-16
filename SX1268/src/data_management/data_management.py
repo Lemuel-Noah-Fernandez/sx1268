@@ -143,7 +143,7 @@ class DataManager:
             dataset_chunk = dataset_data[i * dataset_size:(i + 1) * dataset_size]
             unpacked_dataset = struct.unpack('8B', dataset_chunk)
             self.datasets.append({
-                "satellite_mode": bool(unpacked_dataset[0]),
+                "satellite_mode": unpacked_dataset[0],
                 "battery_voltage": self.decode_voltage(unpacked_dataset[1]),
                 "battery_current": self.decode_current(unpacked_dataset[2]),
                 "regulated_bus_current_3v3": self.decode_bus_current(unpacked_dataset[3]),
