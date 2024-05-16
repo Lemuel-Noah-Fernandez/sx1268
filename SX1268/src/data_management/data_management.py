@@ -16,6 +16,22 @@ class DataManager:
         self.time_field = None
         self.datasets = []
 
+    @staticmethod
+    def decode_voltage(voltage):
+        return (voltage + 60) / 20.0
+
+    @staticmethod
+    def decode_current(current):
+        return (current - 127) / 127.0
+
+    @staticmethod
+    def decode_bus_current(current):
+        return current / 40.0
+
+    @staticmethod
+    def decode_temperature(temp):
+        return (temp - 60) / 4.0
+
     def append_to_json(self, data, ssid):
         """ Append data to a JSON file based on SSID"""
         file_path = self.json_files.get(ssid)
@@ -149,16 +165,3 @@ class DataManager:
             self.datasets = []
             return parsed_data
         return None  # Return None if only the first packet is processed so far
-
-    # Helper functions ------------------------------------------------------------
-    def decode_voltage(voltage):
-        return (voltage + 60) / 20.0
-
-    def decode_current(current):
-        return (current - 127) / 127.0
-
-    def decode_bus_current(current):
-        return current / 40.0
-
-    def decode_temperature(temp):
-        return (temp - 60) / 4.0
