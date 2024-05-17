@@ -1,0 +1,46 @@
+[
+    {
+        "debris_position_x": 1.0,
+        "debris_position_y": 2.0,
+        "debris_position_z": 3.0,
+        "debris_velocity_x": 4.0,
+        "debris_velocity_y": 5.0,
+        "debris_velocity_z": 6.0,
+        "debris_diameter": 7.0,
+        "time_of_detection": 789,
+        "object_count": 42
+    },
+    {
+        "debris_position_x": 1.0,
+        "debris_position_y": 2.0,
+        "debris_position_z": 3.0,
+        "debris_velocity_x": 4.0,
+        "debris_velocity_y": 5.0,
+        "debris_velocity_z": 6.0,
+        "debris_diameter": 7.0,
+        "time_of_detection": 789,
+        "object_count": 42
+    },
+    {
+        "debris_position_x": 1.0,
+        "debris_position_y": 2.0,
+        "debris_position_z": 3.0,
+        "debris_velocity_x": 4.0,
+        "debris_velocity_y": 5.0,
+        "debris_velocity_z": 6.0,
+        "debris_diameter": 7.0,
+        "time_of_detection": 789,
+        "object_count": 42
+    },
+    {
+        "debris_position_x": 1.0,
+        "debris_position_y": 2.0,
+        "debris_position_z": 3.0,
+        "debris_velocity_x": 4.0,
+        "debris_velocity_y": 5.0,
+        "debris_velocity_z": 6.0,
+        "debris_diameter": 7.0,
+        "time_of_detection": 789,
+        "object_count": 42
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "position_x": 1.0,
+        "position_y": 2.0,
+        "position_z": 3.0,
+        "orientation_x": 0.10000000149011612,
+        "orientation_y": 0.20000000298023224,
+        "orientation_z": 0.30000001192092896,
+        "orientation_w": 0.4000000059604645,
+        "velocity_x": 0.5,
+        "velocity_y": 0.6000000238418579,
+        "velocity_z": 0.699999988079071
+    },
+    {
+        "position_x": 1.0,
+        "position_y": 2.0,
+        "position_z": 3.0,
+        "orientation_x": 0.10000000149011612,
+        "orientation_y": 0.20000000298023224,
+        "orientation_z": 0.30000001192092896,
+        "orientation_w": 0.4000000059604645,
+        "velocity_x": 0.5,
+        "velocity_y": 0.6000000238418579,
+        "velocity_z": 0.699999988079071
+    },
+    {
+        "position_x": 1.0,
+        "position_y": 2.0,
+        "position_z": 3.0,
+        "orientation_x": 0.10000000149011612,
+        "orientation_y": 0.20000000298023224,
+        "orientation_z": 0.30000001192092896,
+        "orientation_w": 0.4000000059604645,
+        "velocity_x": 0.5,
+        "velocity_y": 0.6000000238418579,
+        "velocity_z": 0.699999988079071
+    },
+    {
+        "position_x": 1.0,
+        "position_y": 2.0,
+        "position_z": 3.0,
+        "orientation_x": 0.10000000149011612,
+        "orientation_y": 0.20000000298023224,
+        "orientation_z": 0.30000001192092896,
+        "orientation_w": 0.4000000059604645,
+        "velocity_x": 0.5,
+        "velocity_y": 0.6000000238418579,
+        "velocity_z": 0.699999988079071
+    }
+]

@@ -1,0 +1,1962 @@
+[
+    {
+        "satellite_id": "DEBRA",
+        "time_field": 1234567890,
+        "datasets": [
+            {
+                "satellite_mode": true,
+                "battery_voltage": 6.5,
+                "battery_current": 0.49606299212598426,
+                "regulated_bus_current_3v3": 0.1,
+                "regulated_bus_current_5v": 0.2,
+                "temperature_comm": 25.0,
+                "temperature_eps": 20.0,
+                "temperature_battery": 15.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 7.0,
+                "battery_current": 0.5984251968503937,
+                "regulated_bus_current_3v3": 0.2,
+                "regulated_bus_current_5v": 0.3,
+                "temperature_comm": 26.0,
+                "temperature_eps": 21.0,
+                "temperature_battery": 16.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": false,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            }
+        ]
+    },
+    {
+        "satellite_id": "DEBRA",
+        "time_field": 1234567890,
+        "datasets": [
+            {
+                "satellite_mode": 1,
+                "battery_voltage": 6.5,
+                "battery_current": 0.49606299212598426,
+                "regulated_bus_current_3v3": 0.1,
+                "regulated_bus_current_5v": 0.2,
+                "temperature_comm": 25.0,
+                "temperature_eps": 20.0,
+                "temperature_battery": 15.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 7.0,
+                "battery_current": 0.5984251968503937,
+                "regulated_bus_current_3v3": 0.2,
+                "regulated_bus_current_5v": 0.3,
+                "temperature_comm": 26.0,
+                "temperature_eps": 21.0,
+                "temperature_battery": 16.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            }
+        ]
+    },
+    null,
+    {
+        "satellite_id": "DEBRA",
+        "time_field": 1234567890,
+        "datasets": [
+            {
+                "satellite_mode": 1,
+                "battery_voltage": 6.5,
+                "battery_current": 0.49606299212598426,
+                "regulated_bus_current_3v3": 0.1,
+                "regulated_bus_current_5v": 0.2,
+                "temperature_comm": 25.0,
+                "temperature_eps": 20.0,
+                "temperature_battery": 15.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 7.0,
+                "battery_current": 0.5984251968503937,
+                "regulated_bus_current_3v3": 0.2,
+                "regulated_bus_current_5v": 0.3,
+                "temperature_comm": 26.0,
+                "temperature_eps": 21.0,
+                "temperature_battery": 16.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            }
+        ]
+    },
+    null,
+    {
+        "satellite_id": "DEBRA",
+        "time_field": 1234567890,
+        "datasets": [
+            {
+                "satellite_mode": 1,
+                "battery_voltage": 6.5,
+                "battery_current": 0.49606299212598426,
+                "regulated_bus_current_3v3": 0.1,
+                "regulated_bus_current_5v": 0.2,
+                "temperature_comm": 25.0,
+                "temperature_eps": 20.0,
+                "temperature_battery": 15.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 7.0,
+                "battery_current": 0.5984251968503937,
+                "regulated_bus_current_3v3": 0.2,
+                "regulated_bus_current_5v": 0.3,
+                "temperature_comm": 26.0,
+                "temperature_eps": 21.0,
+                "temperature_battery": 16.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 3.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            }
+        ]
+    },
+    null,
+    {
+        "satellite_id": "DEBRA",
+        "time_field": 1234567890,
+        "datasets": [
+            {
+                "satellite_mode": 1,
+                "battery_voltage": 6.5,
+                "battery_current": 0.49606299212598426,
+                "regulated_bus_current_3v3": 0.1,
+                "regulated_bus_current_5v": 0.2,
+                "temperature_comm": 25.0,
+                "temperature_eps": 20.0,
+                "temperature_battery": 15.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 7.0,
+                "battery_current": 0.5984251968503937,
+                "regulated_bus_current_3v3": 0.2,
+                "regulated_bus_current_5v": 0.3,
+                "temperature_comm": 26.0,
+                "temperature_eps": 21.0,
+                "temperature_battery": 16.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            }
+        ]
+    },
+    null,
+    {
+        "satellite_id": "DEBRA",
+        "time_field": 1234567890,
+        "datasets": [
+            {
+                "satellite_mode": 1,
+                "battery_voltage": 6.5,
+                "battery_current": 0.49606299212598426,
+                "regulated_bus_current_3v3": 0.1,
+                "regulated_bus_current_5v": 0.2,
+                "temperature_comm": 25.0,
+                "temperature_eps": 20.0,
+                "temperature_battery": 15.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 7.0,
+                "battery_current": 0.5984251968503937,
+                "regulated_bus_current_3v3": 0.2,
+                "regulated_bus_current_5v": 0.3,
+                "temperature_comm": 26.0,
+                "temperature_eps": 21.0,
+                "temperature_battery": 16.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            },
+            {
+                "satellite_mode": 0,
+                "battery_voltage": 0.0,
+                "battery_current": 0.0,
+                "regulated_bus_current_3v3": 0.0,
+                "regulated_bus_current_5v": 0.0,
+                "temperature_comm": 0.0,
+                "temperature_eps": 0.0,
+                "temperature_battery": 0.0
+            }
+        ]
+    }
+]
