@@ -1,15 +1,25 @@
 import json
 import struct
 
+import os
+import json
+
 class DataManager:
     """ A class that maintains and updates json files depending on the type of data downlinked """
     def __init__(self):
+        # Define the directory for JSON files
+        self.data_directory = 'data'
+        
+        # Ensure the data directory exists
+        os.makedirs(self.data_directory, exist_ok=True)
+
+        # Define the JSON files with the data directory included
         self.json_files = {
-            0b1110: 'wod_data.json',       # Whole Orbit Data
-            0b1101: 'pose_data.json',      # Satellite Pose
-            0b1011: 'misc_data.json',      # Miscellaneous Data
-            0b0111: 'commands_data.json',  # Commands
-            0b1111: 'science_data.json'    # Science Data
+            0b1110: os.path.join(self.data_directory, 'wod_data.json'),       # Whole Orbit Data
+            0b1101: os.path.join(self.data_directory, 'pose_data.json'),      # Satellite Pose
+            0b1011: os.path.join(self.data_directory, 'misc_data.json'),      # Miscellaneous Data
+            0b0111: os.path.join(self.data_directory, 'commands_data.json'),  # Commands
+            0b1111: os.path.join(self.data_directory, 'science_data.json')    # Science Data
         }
 
         # WOD data information
