@@ -28,11 +28,9 @@ class Transceiver(SX126x):
         # File path of received commands for visualization
         self.json_file_path = 'received_commands.json'
     
-    def send_deal(
-            self
-        ) -> None:
+    def send_deal(self) -> None:
         """Sends data after taking input from the user"""
-        # Receive message from user
+        # Temporarily set terminal settings to original for user input
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
         print("\nPlease input your commands in the format <component>,<component_id>,<command>: ", end='')
         message = input()
@@ -54,6 +52,8 @@ class Transceiver(SX126x):
                 frame)
         self.send(data)
         print("Message sent!")
+
+        # Reset terminal to non-canonical mode
         tty.setcbreak(sys.stdin.fileno())
         return None
 

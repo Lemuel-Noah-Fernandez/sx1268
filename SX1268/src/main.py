@@ -12,7 +12,7 @@ def main():
     # Set the terminal to non-canonical mode to immediately process input
     tty.setcbreak(sys.stdin.fileno())
 
-    # Clear json files on start up
+    # Clear JSON files on start up
     DataManager().clear_json_files()
 
     # Listen for commands to receive/send
@@ -22,12 +22,15 @@ def main():
         while True:
             if select.select([sys.stdin], [], [], 0) == ([sys.stdin], [], []):
                 c = sys.stdin.read(1)
-                if c == '\x1b': break
+                if c == '\x1b': 
+                    break
                 if c == '\x69':
                     transceiver.send_deal()
+                    # Ensure terminal is set back to non-canonical mode
+                    tty.setcbreak(sys.stdin.fileno())
                 sys.stdout.flush()
             
-            # Received commands
+            # Receive commands
             transceiver.receive_data()
 
     except KeyboardInterrupt:
