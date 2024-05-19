@@ -9,13 +9,9 @@ class DataManager:
     def __init__(self):
         # Define the directory for JSON files
         self.data_directory = 'data'
-        # self.temp_directory = 'temp_data' 
-        # The temp directory ensures rsync doesn't access files that are being written to.
-        # Allows the "Multiple processes" error to not show up
-        
+
         # Ensure the data directory exists
         os.makedirs(self.data_directory, exist_ok=True)
-        # os.makedirs(self.temp_directory, exist_ok=True)
 
         # Define the JSON files with the data directory included
         self.json_files = {
@@ -25,13 +21,6 @@ class DataManager:
             0b0111: os.path.join(self.data_directory, 'commands_data.json'),  # Commands
             0b1111: os.path.join(self.data_directory, 'science_data.json')    # Science Data
         }
-        # self.temp_json_files = {
-        #     0b1110: os.path.join(self.temp_directory, 'wod_data.json'),
-        #     0b1101: os.path.join(self.temp_directory, 'pose_data.json'),
-        #     0b1011: os.path.join(self.temp_directory, 'misc_data.json'),
-        #     0b0111: os.path.join(self.temp_directory, 'commands_data.json'),
-        #     0b1111: os.path.join(self.temp_directory, 'science_data.json')
-        # }
 
         # WOD data information
         self.satellite_id = None
@@ -71,36 +60,10 @@ class DataManager:
             with open(file_path, 'w') as file:
                 json.dump([data], file, indent=4)
 
-    # def append_to_json(self, data, ssid):
-    #     """ Append data to a JSON file based on SSID"""
-    #     temp_file_path = self.temp_json_files.get(ssid)
-    #     final_file_path = self.json_files.get(ssid)
-    #     try:
-    #         with open(temp_file_path, 'r+') as file:
-    #             existing_data = json.load(file)
-    #             existing_data.append(data)
-    #             file.seek(0)
-    #             json.dump(existing_data, file, indent=4)
-    #     except (FileNotFoundError, json.JSONDecodeError):
-    #         with open(temp_file_path, 'w') as file:
-    #             json.dump([data], file, indent=4)
-
-    #     # Move the file from the temp directory to the final directory
-    #     os.rename(temp_file_path, final_file_path)
-
-
-    # def clear_json_files(self):
-    #     """ Clears all json files on startup """
-    #     for path in self.json_files.values():
-    #         try:
-    #             with open(path, 'w') as file:
-    #                 file.write('[]')
-    #         except Exception as e:
-    #             print(f"Failed to clear JSON file {path}: {str(e)}")
 
     def clear_json_files(self):
         """ Clears all json files on startup """
-        for path in list(self.json_files.values()) + list(self.temp_json_files.values()):
+        for path in self.json_files.values():
             try:
                 with open(path, 'w') as file:
                     file.write('[]')
