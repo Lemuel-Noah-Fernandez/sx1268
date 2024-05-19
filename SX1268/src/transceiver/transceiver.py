@@ -22,19 +22,14 @@ class Transceiver(SX126x):
         # Terminal settings
         self.old_settings = termios.tcgetattr(sys.stdin)
 
-        # Data manajer initialisation
+        # Data manager initialization
         self.data_manager = DataManager()
 
         # File path of received commands for visualization
         self.json_file_path = 'received_commands.json'
     
-    def send_deal(self) -> None:
+    def send_deal(self, message: str) -> None:
         """Sends data after taking input from the user"""
-        # Temporarily set terminal settings to original for user input
-        termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
-        print("\nPlease input your commands in the format <component>,<component_id>,<command>: ", end='')
-        message = input()
-
         # Frame encoder
         ssid_type = 0b0111  # Command data type
         ax25_frame = AX25UIFrame(message, ssid_type)
@@ -53,27 +48,22 @@ class Transceiver(SX126x):
         self.send(data)
         print("Message sent!")
 
-        # Reset terminal to non-canonical mode
-        tty.setcbreak(sys.stdin.fileno())
-        return None
-
-
     def receive_data(self):
         data = self.receive()
 
         if data:
             try:
-                # Make sure data is in byts
+                # Make sure data is in bytes
                 if isinstance(data, bytes):
-                    # Initialise decoder
+                    # Initialize decoder
                     decoder = AX25UIFrameDecoder()
                     decoded_frame = decoder.decode_ax25_frame(data)
 
-                    # Take out ssid and info
+                    # Extract ssid and info
                     ssid = decoded_frame["d_ssid"]
                     info_data = decoded_frame["info"]
 
-                    # Append to json files
+                    # Append to JSON files
                     json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
                     self.data_manager.append_to_json(json_data, ssid)
                     return decoded_frame
@@ -88,5 +78,3 @@ class Transceiver(SX126x):
         """ Reset terminal settings to their original state. """
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
         return None
-
-    
