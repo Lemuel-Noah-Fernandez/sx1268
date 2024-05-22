@@ -144,6 +144,7 @@ class DataManager:
     def parse_raw_lidar_data(self, raw_data):
         """ Parse raw lidar data to JSON """
         format_string = 'B64H'
+        print(f"Size of receiving: {struct.calcsize(format_string)}")
         unpacked_data = struct.unpack(format_string, raw_data)
         return {
             "lidar_num": unpacked_data[0],
