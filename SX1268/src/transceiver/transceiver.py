@@ -62,6 +62,7 @@ class Transceiver(SX126x):
                     # Extract ssid and info
                     ssid = decoded_frame["d_ssid"]
                     info_data = decoded_frame["info"]
+                    print(f"Received message is: {info_data}")
 
                     # Append to JSON files
                     json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
