@@ -149,7 +149,7 @@ class DataManager:
         return {
             "lidar_num": unpacked_data[0],
             # "distances": list(unpacked_data[1:])
-            "distances": unpacked_data[1]
+            "distances": unpacked_data[1:]
         }
 
 
