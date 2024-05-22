@@ -6,6 +6,8 @@ class AX25UIFrameDecoder:
         # Ensure there are beginning and ending flags
         if frame[0] != 0x7E or frame[-1] != 0x7E:
             raise ValueError("Invalid AX.25 frame - flag bit not present")
+        else:
+            print("Flag bits of AX.25 are present")
 
         # Address field - destination
         destination_callsign = ''.join([chr((frame[i] >> 1) & 0x7F) for i in range(1, 7)]).strip()
@@ -30,6 +32,8 @@ class AX25UIFrameDecoder:
 
         if received_fcs != calculated_fcs:
             raise ValueError("FCS check failed")
+        else:
+            print("Passed FCS check")
 
         return {
             'd_call': destination_callsign,

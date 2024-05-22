@@ -60,10 +60,22 @@ class Transceiver(SX126x):
                     decoded_frame = decoder.decode_ax25_frame(data)
 
                     # Extract ssid and info
-                    ssid = decoded_frame["d_ssid"]
+                    d_call = decoded_frame["d_call"]
+                    d_ssid = decoded_frame["d_ssid"]
+                    s_call = decoded_frame["s_call"]
+                    s_ssid = decoded_frame["s_ssid"]
+                    control = decoded_frame["control"]
+                    pid = decoded_frame["pid"]
                     info_data = decoded_frame["info"]
+                    print(f"Destination callsign: {d_call}")
+                    print(f"Destination ssid: {d_ssid}")
+                    print(f"Source callsign: {s_call}")
+                    print(f"Source SSID: {s_ssid}")
+                    print(f"Control: {control}")
+                    print(f"PID: {pid}")
                     print(f"Received message is: {info_data}")
 
+                    ssid = decoded_frame["d_ssid"]
                     # Append to JSON files
                     json_data = self.data_manager.convert_bytes_to_json(info_data, ssid)
                     self.data_manager.append_to_json(json_data, ssid)
