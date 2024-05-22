@@ -68,9 +68,9 @@ class Transceiver(SX126x):
                     pid = decoded_frame["pid"]
                     info_data = decoded_frame["info"]
                     print(f"Destination callsign: {d_call}")
-                    print(f"Destination ssid: {d_ssid}")
+                    print(f"Destination ssid: {bin(d_ssid)}")
                     print(f"Source callsign: {s_call}")
-                    print(f"Source SSID: {s_ssid}")
+                    print(f"Source SSID: {bin(s_ssid)}")
                     print(f"Control: {control}")
                     print(f"PID: {pid}")
                     print(f"Received message is: {info_data}")
