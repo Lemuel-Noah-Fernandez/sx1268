@@ -56,6 +56,7 @@ class Transceiver(SX126x):
                 # Make sure data is in bytes
                 if isinstance(data, bytes):
                     # Initialize decoder
+                    print(f"Data: {data}")
                     decoder = AX25UIFrameDecoder()
                     decoded_frame = decoder.decode_ax25_frame(data)
 
