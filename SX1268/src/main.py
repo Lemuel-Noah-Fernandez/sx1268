@@ -29,6 +29,9 @@ async def main():
     # Clear json files on start up
     DataManager().clear_json_files()
 
+    # Send startup command
+    transceiver.startup_command()
+
     # Start the input coroutine
     send_task = asyncio.create_task(handle_send(transceiver))
 
@@ -46,6 +49,8 @@ async def main():
     except Exception as e:
         print(f"An error occurred: {str(e)}")
     finally:
+        # Send command for program finish
+        transceiver.ending_command()
         send_task.cancel()
         try:
             await send_task
