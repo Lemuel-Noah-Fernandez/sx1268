@@ -81,7 +81,8 @@ class DataManager:
             0b1101: 'satellite_pose',
             0b1011: 'misc',
             0b0111: 'commands',
-            0b1100: 'raw_lidar'
+            0b1100: 'raw_lidar',
+            0b1000: 'debris'
         }.get(ssid, 'unknown')
 
         print(f"Received {data_type} data")
@@ -99,6 +100,8 @@ class DataManager:
             return self.parse_commands_data(raw_data)
         elif ssid == 0b1100: # Raw lidar
             return self.parse_raw_lidar_data(raw_data)
+        elif ssid == 0b1000:
+            return self.parse_debris_data(raw_data)
         else:
             return {"raw_data": raw_data.hex()}
 
@@ -151,6 +154,24 @@ class DataManager:
             # "distances": list(unpacked_data[1:])
             "distances": unpacked_data[1:]
         }
+    
+    def parse_debris_data(self, raw_data):
+        """ Parse debris data to JSON """
+        format_string = '<B f f f f B'
+        header_size = struct.calcsize(format_string)
+        unpacked_data = struct.unpack(format_string, raw_data[:header_size])
+        blob_position = list(raw_data[header_size:])
+        
+        return {
+            "lidar_label": unpacked_data[0],
+            "range": unpacked_data[1],
+            "theta": unpacked_data[2],
+            "phi": unpacked_data[3],
+            "size": unpacked_data[4],
+            "num_pixels": unpacked_data[5],
+            "blob_position": blob_position
+        }
+
 
 
     def parse_wod_data(self, raw_data):
