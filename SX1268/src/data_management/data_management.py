@@ -20,7 +20,8 @@ class DataManager:
             0b1011: os.path.join(self.data_directory, 'misc_data.json'),      # Miscellaneous Data
             0b0111: os.path.join(self.data_directory, 'commands_data.json'),  # Commands
             0b1111: os.path.join(self.data_directory, 'science_data.json'),   # Science Data
-            0b1100: os.path.join(self.data_directory, 'raw_lidar_data.json')  # Raw lidar Data
+            0b1100: os.path.join(self.data_directory, 'raw_lidar_data.json'), # Raw lidar Data
+            0b1000: os.path.join(self.data_directory, 'debris_found_data.json') # Debris found
         }
 
         # WOD data information
