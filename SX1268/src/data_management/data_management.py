@@ -19,7 +19,8 @@ class DataManager:
             0b1101: os.path.join(self.data_directory, 'pose_data.json'),      # Satellite Pose
             0b1011: os.path.join(self.data_directory, 'misc_data.json'),      # Miscellaneous Data
             0b0111: os.path.join(self.data_directory, 'commands_data.json'),  # Commands
-            0b1111: os.path.join(self.data_directory, 'science_data.json')    # Science Data
+            0b1111: os.path.join(self.data_directory, 'science_data.json'),   # Science Data
+            0b1100: os.path.join(self.data_directory, 'raw_lidar_data.json')  # Raw lidar Data
         }
 
         # WOD data information
@@ -79,7 +80,8 @@ class DataManager:
             0b1110: 'wod',
             0b1101: 'satellite_pose',
             0b1011: 'misc',
-            0b0111: 'commands'
+            0b0111: 'commands',
+            0b1100: 'raw_lidar'
         }.get(ssid, 'unknown')
 
         print(f"Received {data_type} data")
@@ -95,6 +97,8 @@ class DataManager:
             return self.parse_misc_data(raw_data)
         elif ssid == 0b0111:  # Commands
             return self.parse_commands_data(raw_data)
+        elif ssid == 0b1100: # Raw lidar
+            return self.parse_raw_lidar_data(raw_data)
         else:
             return {"raw_data": raw_data.hex()}
 
@@ -136,6 +140,18 @@ class DataManager:
         return {
             "Data": raw_data.decode('ascii')
         }
+
+    def parse_raw_lidar_data(self, raw_data):
+        """ Parse raw lidar data to JSON """
+        format_string = 'B64H'
+        print(f"Size of receiving: {struct.calcsize(format_string)}")
+        unpacked_data = struct.unpack(format_string, raw_data)
+        return {
+            "lidar_num": unpacked_data[0],
+            # "distances": list(unpacked_data[1:])
+            "distances": unpacked_data[1:]
+        }
+
 
     def parse_wod_data(self, raw_data):
         """Parse WOD data from raw bytes to JSON."""
