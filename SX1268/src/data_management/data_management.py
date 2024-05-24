@@ -158,6 +158,7 @@ class DataManager:
     
     def parse_debris_data(self, raw_data):
         """ Parse debris data to JSON """
+        print(f"Raw data: {raw_data}")
         format_string = '<B f f f f B'
         header_size = struct.calcsize(format_string)
         unpacked_data = struct.unpack(format_string, raw_data[:header_size])
